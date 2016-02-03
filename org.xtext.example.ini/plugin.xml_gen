@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.eclipse.org/ice/project/Input"
+			class = "org.eclipse.ice.project.project.ProjectPackage"
+			genModel = "model/generated/Input.genmodel" />
+	</extension>
+</plugin>
