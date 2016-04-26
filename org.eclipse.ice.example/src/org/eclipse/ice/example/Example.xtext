@@ -1,0 +1,28 @@
+grammar org.eclipse.ice.example.Example with org.eclipse.xtext.common.Terminals hidden(COMMENT, WHITESPACE)
+generate project "http://www.eclipse.org/org.eclipse.ice.example"
+Input:
+    {Input}
+    NEWLINE*
+    sections+=Section*;
+Section:
+    OPEN + sectionName=ID + CLOSE
+    (NEWLINE+ lines+=Line)+
+    NEWLINE+;
+Line:
+    varName=ID + ASSIGN + value=TEXT;
+terminal ID:
+    ('A'..'Z' | 'a'..'z') ('A'..'Z' | 'a'..'z' | '_' | '-' | '0'..'9');
+terminal TEXT:
+    (WHITESPACE+ | STRING+)*;
+terminal NEWLINE:
+    '\r'? '\n'+;
+terminal WHITESPACE:
+    (' '|'\t')+;
+terminal OPEN:
+    '[';
+terminal CLOSE:
+    ']';
+terminal ASSIGN:
+    '=';
+terminal COMMENT:
+    '#' (WHITESPACE+ | STRING+)*;

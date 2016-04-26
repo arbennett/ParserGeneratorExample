@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.ice.example
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.eclipse.ice.example; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.eclipse.ice.example.scoping,
+ org.eclipse.ice.example.project.util,
+ org.eclipse.ice.example.validation,
+ org.eclipse.ice.example.generator,
+ org.eclipse.ice.example.project.impl,
+ org.eclipse.ice.example.services,
+ org.eclipse.ice.example.parser.antlr.internal,
+ org.eclipse.ice.example,
+ org.eclipse.ice.example.project,
+ org.eclipse.ice.example.serializer,
+ org.eclipse.ice.example.parser.antlr,
+ org.eclipse.ice.example.io
+Import-Package: com.google.inject;version="1.4.0",
+ org.apache.log4j,
+ org.eclipse.core.resources,
+ org.eclipse.ice.datastructures.ICEObject,
+ org.eclipse.ice.datastructures.entry,
+ org.eclipse.ice.datastructures.form,
+ org.eclipse.ice.io.serializable

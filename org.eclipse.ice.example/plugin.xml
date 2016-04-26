@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="org.eclipse.ice.io.ExampleReader"
+         name="Example Reader"
+         point="org.eclipse.ice.io.reader">
+      <implementation
+            class="org.eclipse.ice.example.ExampleReader">
+      </implementation>
+   </extension>
+   <extension
+         id="org.eclipse.ice.io.ExampleWriter"
+         name="Example Writer"
+         point="org.eclipse.ice.io.writer">
+      <implementation
+            class="org.eclipse.ice.example.ExampleWriter">
+      </implementation>
+   </extension>
+</plugin>
